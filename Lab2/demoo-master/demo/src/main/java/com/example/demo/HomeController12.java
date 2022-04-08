@@ -12,6 +12,7 @@ public class HomeController12 {
     public String index() {
         return "example";
 
+
     }
 
 }
