@@ -1,0 +1,8 @@
+2022-06-09 20:11:34 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Błąd konwersji danych "'A' (FILM: ""OCENA"" INTEGER)"
+Data conversion error converting "'A' (FILM: ""OCENA"" INTEGER)"; SQL statement:
+INSERT INTO "PUBLIC"."FILM"("ID","DATA","KATEGORIA","OCENA",U&"TYTU\0141")VALUES(?,?,?,?,?) [22018-212]
+2022-06-09 20:11:34 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Błąd konwersji danych "'A' (FILM: ""OCENA"" INTEGER)"
+Data conversion error converting "'A' (FILM: ""OCENA"" INTEGER)"; SQL statement:
+INSERT INTO "PUBLIC"."FILM"("ID","DATA","KATEGORIA","OCENA",U&"TYTU\0141")VALUES(?,?,?,?,?) [22018-212]

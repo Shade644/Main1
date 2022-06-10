@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.Year;
 import java.util.Date;
 
 @Entity
@@ -12,22 +13,22 @@ public class Film {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Nazwa;
-    private  String Kategoria;
-    private String Ocena;
+    private String Tytuł;
+    private String Kategoria;
+    private Integer Ocena;
 
-    private Date Data;
+    private Year Data;
 
-    public Film(Long id, String nazwa, String kategoria, String ocena,Date data) {
+
+    public Film(Long id, String tytuł, String kategoria, Integer ocena,Year data) {
         this.id = id;
-        Nazwa = nazwa;
+        Tytuł = tytuł;
         Kategoria = kategoria;
         Ocena = ocena;
         Data = data;
     }
 
-    public Film(String test, String kategoria, String comedy,Date date) {
-    }
+
 
     public Film() {
 
@@ -37,19 +38,19 @@ public class Film {
         return id;
     }
 
-    public String getNazwa() {
-        return Nazwa;
+    public String getTytuł() {
+        return Tytuł;
     }
 
     public String getKategoria() {
         return Kategoria;
     }
 
-    public String getOcena() {
+    public Integer getOcena() {
         return Ocena;
     }
 
-    public Date getData() {
+    public Year getData() {
         return Data;
     }
 }
