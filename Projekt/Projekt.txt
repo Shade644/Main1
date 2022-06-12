@@ -1,17 +1,17 @@
-Temat:Strona o filmach (cos ala imdb)
-1.Przygotowanie srodowiska i harmonogramu pracy. 
-2.Stworzenie podstawowy aplikacji Spring Boot 
-3.Utworzenie bazy danych. 
-4.Stworzenia sytsemu logowania 
-5.Utworzenie systemu rejestracja
-6.Utworzenie prostego interfejsu użytkownika. 
-7.Dodanie danych do bazy. 
-8.Stowrzenie metody dodawanie,usuwanie,edycja filmów z poziomu strony  
-9.wprowadzić conajmniej 2 mikroserwisy komunikujące sie ze sobą 
-10.Skrypt uruchamiający.wersja produkcyjna 
-11.Stworzenie strony (wygląd itp.) 
-12.Wyświetlenie danych z bazy na stronie 
-13. 
+Temat:Aplikacja do stosowania w wypożyczalni filmów
+1.Przygotowanie srodowiska i harmonogramu pracy.
+2.Stworzenie podstawowy aplikacji (Spring Boot?)
+3.Utworzenie bazy danych.
+4.Utworzenie prostego interfejsu użytkownika.
+5.Dodanie danych do bazy.
+6.Stowrzenie metody dodawanie filmów z poziomu strony
+7.Stowrzenie metody usuwania filmów z poziomu strony
+8.Stowrzenie metody edycji filmów z poziomu strony
+9.wprowadzić conajmniej 2 mikroserwisy komunikujące sie ze sobą
+10.Skrypt uruchamiający 
+11.Stworzenie strony (wygląd itp.)
+12.Wyświetlenie danych z bazy na stronie
+13.Próba stworzenia logowania
 14.Próba stworzenia prostego UI
- 15.Testowanie aplikacji 
+15.Testowanie aplikacji
 16.Sporządzanie opisu aplikacji
