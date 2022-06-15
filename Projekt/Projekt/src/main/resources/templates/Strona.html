@@ -6,5 +6,19 @@
 </head>
 <body>
 <H1>Strona administratora</H1>
+
+<form action="/saveData">
+    <p>Tytuł</p>
+    <input type="text" name="tytul"><br>
+    <p>Kategoria</p>
+    <input type="text" name="kategoria"><br>
+    <p>Ocena</p>
+    <input type="number" min="1" max="10" step="1" name="ocena"><br>
+    <p>Data</p>
+    <input type="number" min="1900" max="2099" step="1" name="data" /><br>
+    <input type="submit" value="zapisz">
+<br>
+    <a href="/logout">Wylogowanie</a>
+</form>
 </body>
 </html>

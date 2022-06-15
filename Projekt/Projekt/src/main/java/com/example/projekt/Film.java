@@ -7,50 +7,66 @@ import javax.persistence.Id;
 import java.time.Year;
 import java.util.Date;
 
+
 @Entity
 public class Film {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private  int id;
+    private String tytul;
+    private int ocena;
+    private  String Kategoria;
 
-    private String Tytuł;
-    private String Kategoria;
-    private Integer Ocena;
-
-    private Year Data;
-
-
-    public Film(Long id, String tytuł, String kategoria, Integer ocena,Year data) {
-        this.id = id;
-        Tytuł = tytuł;
-        Kategoria = kategoria;
-        Ocena = ocena;
-        Data = data;
-    }
-
-
+    private Integer data;
 
     public Film() {
 
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public String getTytuł() {
-        return Tytuł;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTytul() {
+        return tytul;
+    }
+
+    public void setTytul(String tytul) {
+        this.tytul = tytul;
+    }
+
+    public int getOcena() {
+        return ocena;
+    }
+
+    public void setOcena(int ocena) {
+        this.ocena = ocena;
     }
 
     public String getKategoria() {
         return Kategoria;
     }
 
-    public Integer getOcena() {
-        return Ocena;
+    public void setKategoria(String kategoria) {
+        Kategoria = kategoria;
     }
 
-    public Year getData() {
-        return Data;
+    public Integer getData() {
+        return data;
+    }
+
+    public void setData(Integer data) {
+        this.data = data;
+    }
+
+    public Film(String tytul, int ocena, String kategoria, Integer data) {
+        this.tytul = tytul;
+        this.ocena = ocena;
+        Kategoria = kategoria;
+        this.data = data;
     }
 }
