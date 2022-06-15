@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        table, th, td, thead,tbody {
+            border: 1px solid;
+        }
+    </style>
 </head>
 <body>
 <H1>Strona administratora</H1>
 
-<form action="/saveData">
+<form action="/saveData" method="post">
     <p>Tytuł</p>
     <input type="text" name="tytul"><br>
     <p>Kategoria</p>
@@ -18,7 +23,12 @@
     <input type="number" min="1900" max="2099" step="1" name="data" /><br>
     <input type="submit" value="zapisz">
 <br>
-    <a href="/logout">Wylogowanie</a>
 </form>
+<form action="/delete" method="post">
+    <p>Wpisz tytuł</p>
+    <input type="text" name="tytul"><br>
+    <input type="submit" value="usuń">
+</form>
+<a href="/logout">Wylogowanie</a>
 </body>
 </html>

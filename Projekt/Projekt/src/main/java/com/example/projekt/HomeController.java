@@ -15,7 +15,6 @@ FilmRepo repo;
     public ModelAndView showData(){
         ModelAndView mv =new ModelAndView("Film");
 
-        //Iterable<Film> datalist =repo.findAll("Film");
         mv.addObject("test",repo.findAll());
         mv.setViewName("glowna.html");
 
@@ -27,9 +26,20 @@ FilmRepo repo;
         return "Strona.html";
     }
     @RequestMapping("/saveData")
-    @ResponseBody
     public String saveData(Film film){
     repo.save(film);
-        return "Success";
+        return "strona.html";
     }
+
+    @RequestMapping("/delete")
+    public ModelAndView delete(@RequestParam("tytul") String tytul){
+    repo.deleteBytytul(tytul);
+
+        ModelAndView mv =new ModelAndView("Film");
+        mv.addObject("test",repo.findAll());
+        mv.setViewName("glowna.html");
+
+        return mv;
+    }
+
 }

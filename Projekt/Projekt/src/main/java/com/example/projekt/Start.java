@@ -17,8 +17,7 @@ public class Start {
 
 @EventListener(ApplicationReadyEvent.class)
     public void  Run(){
-     //   Film film= new Film("test","A","comedy");
-        //filmRepo.save(film);
+
 
     }
 }
