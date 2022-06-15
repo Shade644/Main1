@@ -11,8 +11,31 @@
 </head>
 <body>
 <H1>Strona administratora</H1>
-
+<h2>Dodawanie danych do bazy</h2>
 <form action="/saveData" method="post">
+    <p>Tytuł</p>
+    <input type="text" name="tytul"><br>
+    <p>Kategoria</p>
+    <input type="text" name="kategoria" ><br>
+    <p>Ocena</p>
+    <input type="number" min="1" max="10" step="1" name="ocena"><br>
+    <p>Data</p>
+    <input type="number" min="1900" max="2099" step="1" name="data" /><br>
+    <input type="submit" value="zapisz">
+<br>
+</form>
+
+<h2>Usuwanie danych z bazy</h2>
+<form action="/delete" method="post">
+    <p>Wpisz tytuł</p>
+    <input type="text" name="tytul"><br>
+    <input type="submit" value="usuń">
+</form>
+
+<h2>Aktualizowanie danych w bazie</h2>
+<form action="/update" method="post">
+    <p>id</p>
+    <input type="number" name="id"><br>
     <p>Tytuł</p>
     <input type="text" name="tytul"><br>
     <p>Kategoria</p>
@@ -21,14 +44,30 @@
     <input type="number" min="1" max="10" step="1" name="ocena"><br>
     <p>Data</p>
     <input type="number" min="1900" max="2099" step="1" name="data" /><br>
-    <input type="submit" value="zapisz">
-<br>
-</form>
-<form action="/delete" method="post">
-    <p>Wpisz tytuł</p>
-    <input type="text" name="tytul"><br>
-    <input type="submit" value="usuń">
+    <input type="submit" value="update">
+    <br>
 </form>
 <a href="/logout">Wylogowanie</a>
+<table>
+
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>tytul</th>
+        <th>kategoria</th>
+        <th>data</th>
+        <th>ocena</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="Film: ${test}">
+        <td th:text="${Film.id}" />
+        <td th:text="${Film.tytul}" />
+        <td th:text="${Film.kategoria}" />
+        <td th:text="${Film.data}" />
+        <td th:text="${Film.ocena}" />
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

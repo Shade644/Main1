@@ -22,18 +22,47 @@ FilmRepo repo;
     }
 
     @RequestMapping("/Strona")
-    public String Strona(){
-        return "Strona.html";
+    public ModelAndView Strona(){
+        ModelAndView mv =new ModelAndView("Film");
+
+        mv.addObject("test",repo.findAll());
+        mv.setViewName("Strona.html");
+
+        return mv;
+
     }
     @RequestMapping("/saveData")
-    public String saveData(Film film){
+    public ModelAndView saveData(Film film){
     repo.save(film);
-        return "strona.html";
+
+        ModelAndView mv =new ModelAndView("Film");
+
+        mv.addObject("test",repo.findAll());
+        mv.setViewName("glowna.html");
+
+        return mv;
     }
 
     @RequestMapping("/delete")
     public ModelAndView delete(@RequestParam("tytul") String tytul){
     repo.deleteBytytul(tytul);
+
+        ModelAndView mv =new ModelAndView("Film");
+        mv.addObject("test",repo.findAll());
+        mv.setViewName("glowna.html");
+
+        return mv;
+    }
+
+    @RequestMapping("/update")
+    public ModelAndView update(Film film){
+    Film updateFilm = repo.findById(film.getId());
+        updateFilm.setTytul(film.getTytul());
+    updateFilm.setKategoria(film.getKategoria());
+    updateFilm.setOcena(film.getOcena());
+    updateFilm.setData(film.getData());
+    repo.save(updateFilm);
+
 
         ModelAndView mv =new ModelAndView("Film");
         mv.addObject("test",repo.findAll());

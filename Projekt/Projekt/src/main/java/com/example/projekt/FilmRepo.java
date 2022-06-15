@@ -13,4 +13,6 @@ public interface FilmRepo extends CrudRepository<Film, Integer> {
  @Query("delete from Film f where f.tytul = ?1")
  int deleteBytytul(String tytul);
 
+ Film findById(int id);
+
 }
