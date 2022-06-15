@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xd</title>
+    <style>
+        table, th, td, thead,tbody {
+        border: 1px solid;
+    }
+    </style>
+</head>
+<body>
+<h1>test</h1>
+<table>
+
+    <thead>
+    <tr>
+        <th>tytul</th>
+        <th>kategoria</th>
+        <th>data</th>
+        <th>ocena</th>
+    </tr>
+    </thead>
+<tbody>
+<tr th:each="Film: ${test}">
+    <td th:text="${Film.tytul}" />
+    <td th:text="${Film.kategoria}" />
+    <td th:text="${Film.data}" />
+    <td th:text="${Film.ocena}" />
+</tr>
+</tbody>
+</table>
+<a href="/Strona">Admin</a>
+</body>
+</html>

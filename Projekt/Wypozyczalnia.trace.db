@@ -19,3 +19,11 @@ java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supporte
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
+2022-06-15 18:55:36 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Błąd konwersji danych "'' (FILM: ""ID"" INTEGER NOT NULL)"
+Data conversion error converting "'' (FILM: ""ID"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."FILM"("ID","KATEGORIA","DATA","OCENA","TYTUL")VALUES(?,?,?,?,?) [22018-212]
+2022-06-15 18:55:36 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Błąd konwersji danych "'' (FILM: ""ID"" INTEGER NOT NULL)"
+Data conversion error converting "'' (FILM: ""ID"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."FILM"("ID","KATEGORIA","DATA","OCENA","TYTUL")VALUES(?,?,?,?,?) [22018-212]
