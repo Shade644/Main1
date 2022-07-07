@@ -11,7 +11,6 @@ public class HomeController {
 @Autowired
 FilmRepo repo;
 
-
 @GetMapping("/")
     public ModelAndView showData(){
         ModelAndView mv =new ModelAndView("Film");

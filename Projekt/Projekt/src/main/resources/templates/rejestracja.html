@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rejestracja</title>
+</head>
+<body>
+<form action="/saveUser" method="post">
+    <p>Login</p>
+    <input type="text" name="login"><br>
+    <p>Hasło</p>
+    <input type="password" name="password" minlength="5" ><br>
+    <p>email</p>
+    <input type="email"name="email"><br>
+    <p>imie</p>
+    <input type="text"name="first_name" /><br>
+    <p>nazwisko</p>
+    <input type="text" name="last_name" /><br>
+    <p>numer</p>
+    <input type="number"  name="number" maxlength="9"/><br>
+    <input type="submit" value="zapisz">
+    <br>
+</form>
+</body>
+</html>

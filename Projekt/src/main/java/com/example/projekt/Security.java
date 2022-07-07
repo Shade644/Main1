@@ -31,8 +31,8 @@ public class Security extends WebSecurityConfigurerAdapter {
                 .antMatchers("/Strona").hasRole("admin")
                 .and()
                 .authorizeRequests().antMatchers("/console/**").permitAll()
-                .and().formLogin()
-                .and().logout().permitAll();
+                        .and().formLogin()
+                        .and().logout().permitAll();
 
         http.csrf().disable();
         http.headers().frameOptions().disable();
@@ -40,4 +40,6 @@ public class Security extends WebSecurityConfigurerAdapter {
 
 
 
-}
+    }
+
+
