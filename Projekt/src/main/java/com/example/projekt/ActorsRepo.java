@@ -7,12 +7,10 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 @Repository
-public interface FilmRepo extends CrudRepository<Film, Integer> {
- @Transactional
- @Modifying
- @Query("delete from Film f where f.tytul = ?1")
- int deleteBytytul(String tytul);
-
- Film findById(int id);
+public interface ActorsRepo extends CrudRepository<Actors, Long> {
+    @Transactional
+    @Modifying
+    @Query()
+    int deleteByimie(String imie);
 
 }

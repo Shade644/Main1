@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Strona Administratora</title>
     <style>
         table, th, td, thead,tbody {
             border: 1px solid;
@@ -19,7 +19,7 @@
     <input type="text" name="kategoria" ><br>
     <p>Ocena</p>
     <input type="number" min="1" max="10" step="1" name="ocena"><br>
-    <p>Data</p>
+    <p>Rok premiery</p>
     <input type="number" min="1900" max="2099" step="1" name="data" /><br>
     <input type="submit" value="zapisz">
 <br>
@@ -42,7 +42,7 @@
     <input type="text" name="kategoria"><br>
     <p>Ocena</p>
     <input type="number" min="1" max="10" step="1" name="ocena"><br>
-    <p>Data</p>
+    <p>Rok premiery</p>
     <input type="number" min="1900" max="2099" step="1" name="data" /><br>
     <input type="submit" value="update">
     <br>
@@ -53,10 +53,10 @@
     <thead>
     <tr>
         <th>ID</th>
-        <th>tytul</th>
-        <th>kategoria</th>
-        <th>data</th>
-        <th>ocena</th>
+        <th>Tytul</th>
+        <th>Kategoria</th>
+        <th>Rok Premiery</th>
+        <th>Ocena</th>
     </tr>
     </thead>
     <tbody>
@@ -69,5 +69,17 @@
     </tr>
     </tbody>
 </table>
+
+<form action="/saveActor" method="post">
+    <p>Imie</p>
+    <input type="text" name="imie"><br>
+    <p>Nazwisko</p>
+    <input type="text" name="nazwisko" ><br>
+    <p>Kraj</p>
+    <input type="text" name="kraj_pochodzenia"><br>
+    <input type="submit" value="zapisz">
+    <br>
+</form>
+
 </body>
 </html>

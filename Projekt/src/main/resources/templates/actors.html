@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aktorzy</title>
+    <style>
+        table, th, td, thead,tbody {
+        border: 1px solid;
+    }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Imie</th>
+        <th>Nazwisko</th>
+        <th>Kraj pochodzenia</th>
+    </tr>
+    </thead>
+<tbody>
+<tr th:each="Actors: ${test2}">
+    <td th:text="${Actors.imie}" />
+    <td th:text="${Actors.nazwisko}" />
+    <td th:text="${Actors.kraj_pochodzenia}" />
+
+</tr>
+</tbody>
+</table>
+</body>
+</html>

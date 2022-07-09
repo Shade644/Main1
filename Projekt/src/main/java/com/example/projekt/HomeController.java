@@ -10,16 +10,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 @Autowired
 FilmRepo repo;
+ActorsRepo actorsrepo;
 
 @GetMapping("/")
     public ModelAndView showData(){
         ModelAndView mv =new ModelAndView("Film");
-
         mv.addObject("test",repo.findAll());
         mv.setViewName("glowna.html");
-
         return mv;
-    }
+}
 
     @RequestMapping("/Strona")
     public ModelAndView Strona(){

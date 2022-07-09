@@ -6,20 +6,21 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="Film")
-public class Film {
+@Table(name = "Actors")
+public class Actors {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    private String tytul;
-    private int ocena;
-    private  String Kategoria;
-    private Integer data;
+
+    private int id_actor;
+    private String imie;
+    private String nazwisko;
+    private String Kraj_pochodzenia;
+
 
 }
