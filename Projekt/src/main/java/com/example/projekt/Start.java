@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Start {
 
-    private FilmRepo filmRepo;
+    private final FilmRepo filmRepo;
 
     @Autowired
     public Start(FilmRepo filmRepo){

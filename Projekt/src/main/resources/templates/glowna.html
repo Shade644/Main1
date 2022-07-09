@@ -4,20 +4,52 @@
     <meta charset="UTF-8">
     <title>Strona Główna</title>
     <style>
-        table, th, td, thead,tbody {
+nav ul{
+    list-style: none;
+    max-width: 500px;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+nav ul li {
+    display: inline-block;
+
+}
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    border: 1px solid black;
+    color:black;
+    padding: 10px 10px;
+    text-align: center;
+}
+nav a:hover{
+    color: lime;
+}
+   table, th, td, thead,tbody {
         border: 1px solid;
     }
     </style>
 </head>
 <body>
-<h1>test</h1>
+<nav>
+    <ul>
+        <li>
+            <a href="/actors">Aktorzy</a>
+        </li>
+        <li><a href="/rejestracja">Rejestacja</a>
+        </li>
+        <li><a href="/Strona">Administrator</a>
+    </ul>
+</nav>
+<h1>Strona Głowna</h1>
 <table>
 
     <thead>
     <tr>
         <th>Tytul</th>
         <th>Kategoria</th>
-        <th>Rok Premiery</th>
+        <th>Data premiery</th>
         <th>Ocena</th>
     </tr>
     </thead>
@@ -30,7 +62,5 @@
 </tr>
 </tbody>
 </table>
-<a href="/Strona">Admin</a>
-<a href="/rejestracja">Rejestracja</a>
 </body>
 </html>

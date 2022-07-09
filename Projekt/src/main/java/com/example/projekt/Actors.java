@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.sql.Date;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,6 +23,7 @@ public class Actors {
     private String imie;
     private String nazwisko;
     private String Kraj_pochodzenia;
+    private Date Data_urodzenia;
 
 
 }

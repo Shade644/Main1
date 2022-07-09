@@ -10,12 +10,14 @@
     </style>
 </head>
 <body>
+<H1>Strona z aktorami</H1>
 <table>
     <thead>
     <tr>
         <th>Imie</th>
         <th>Nazwisko</th>
         <th>Kraj pochodzenia</th>
+        <th>Data urodzenia</th>
     </tr>
     </thead>
 <tbody>
@@ -23,9 +25,11 @@
     <td th:text="${Actors.imie}" />
     <td th:text="${Actors.nazwisko}" />
     <td th:text="${Actors.kraj_pochodzenia}" />
+    <td  th:text="${Actors.data_urodzenia}" />
 
 </tr>
 </tbody>
-</table>
+</table><br>
+<a href="/">Powrót na strone główną</a><br>
 </body>
 </html>

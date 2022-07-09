@@ -38,7 +38,7 @@ ActorsRepo actorsrepo;
         ModelAndView mv =new ModelAndView("Actors");
 
         mv.addObject("test2",actorsrepo.findAll());
-        mv.setViewName("glowna.html");
+        mv.setViewName("actors.html");
 
         return mv;
     }
@@ -49,7 +49,7 @@ ActorsRepo actorsrepo;
 
         ModelAndView mv =new ModelAndView("Actors");
         mv.addObject("test2",actorsrepo.findAll());
-        mv.setViewName("glowna.html");
+        mv.setViewName("actors.html");
 
         return mv;
     }

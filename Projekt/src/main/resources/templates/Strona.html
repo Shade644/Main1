@@ -7,10 +7,14 @@
         table, th, td, thead,tbody {
             border: 1px solid;
         }
+        a {
+        font-size:20px;
+        }
     </style>
 </head>
 <body>
 <H1>Strona administratora</H1>
+
 <h2>Dodawanie danych do bazy</h2>
 <form action="/saveData" method="post">
     <p>Tytuł</p>
@@ -19,8 +23,8 @@
     <input type="text" name="kategoria" ><br>
     <p>Ocena</p>
     <input type="number" min="1" max="10" step="1" name="ocena"><br>
-    <p>Rok premiery</p>
-    <input type="number" min="1900" max="2099" step="1" name="data" /><br>
+    <p>Data premiery</p>
+    <input type="date" name="data" /><br>
     <input type="submit" value="zapisz">
 <br>
 </form>
@@ -30,8 +34,27 @@
     <p>Wpisz tytuł</p>
     <input type="text" name="tytul"><br>
     <input type="submit" value="usuń">
-</form>
-
+</form><br>
+<table>
+<thead>
+<tr>
+    <th>ID</th>
+    <th>Tytul</th>
+    <th>Kategoria</th>
+    <th>Data Premiery</th>
+    <th>Ocena</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="Film: ${test}">
+    <td th:text="${Film.id}" />
+    <td th:text="${Film.tytul}" />
+    <td th:text="${Film.kategoria}" />
+    <td th:text="${Film.data}" />
+    <td th:text="${Film.ocena}" />
+</tr>
+</tbody>
+</table><br>
 <h2>Aktualizowanie danych w bazie</h2>
 <form action="/update" method="post">
     <p>id</p>
@@ -41,45 +64,32 @@
     <p>Kategoria</p>
     <input type="text" name="kategoria"><br>
     <p>Ocena</p>
-    <input type="number" min="1" max="10" step="1" name="ocena"><br>
-    <p>Rok premiery</p>
-    <input type="number" min="1900" max="2099" step="1" name="data" /><br>
+    <input type="number" name="ocena"><br>
+    <p>Data premiery</p>
+    <input type="date" name="data" /><br>
     <input type="submit" value="update">
     <br>
 </form>
-<a href="/logout">Wylogowanie</a>
-<table>
 
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Tytul</th>
-        <th>Kategoria</th>
-        <th>Rok Premiery</th>
-        <th>Ocena</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="Film: ${test}">
-        <td th:text="${Film.id}" />
-        <td th:text="${Film.tytul}" />
-        <td th:text="${Film.kategoria}" />
-        <td th:text="${Film.data}" />
-        <td th:text="${Film.ocena}" />
-    </tr>
-    </tbody>
-</table>
-
+<h2>Dodaj aktora</h2>
 <form action="/saveActor" method="post">
     <p>Imie</p>
     <input type="text" name="imie"><br>
     <p>Nazwisko</p>
     <input type="text" name="nazwisko" ><br>
-    <p>Kraj</p>
+    <p>Kraj pochodzenia</p>
     <input type="text" name="kraj_pochodzenia"><br>
+    <p>Data urodzenia</p>
+    <input type="date" name="data_urodzenia"><br>
     <input type="submit" value="zapisz">
     <br>
 </form>
-
+<h2>Usuwanie aktora z bazy</h2>
+<form action="/deleteActor" method="post">
+    <p>Wpisz imie</p>
+    <input type="text" name="imie"><br>
+    <input type="submit" value="usuń">
+</form><br>
+<a href="/logout">Wylogowanie</a>
 </body>
 </html>

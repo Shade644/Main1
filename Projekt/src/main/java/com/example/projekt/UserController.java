@@ -10,12 +10,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UserController {
-@Autowired
-UserRepo userrep;
+    @Autowired
+    UserRepo userrep;
 
     @GetMapping("/rejestracja")
     public String rejestracja(User user){
-       return "rejestracja";
+        return "rejestracja";
     }
 
     @RequestMapping("/saveUser")
