@@ -44,14 +44,9 @@ ActorsRepo actorsrepo;
     }
 
     @RequestMapping("/deleteActor")
-    public ModelAndView delete(@RequestParam("imie") String imie){
+    public String delete(@RequestParam("imie") String imie){
         actorsrepo.deleteByimie(imie);
-
-        ModelAndView mv =new ModelAndView("Actors");
-        mv.addObject("test2",actorsrepo.findAll());
-        mv.setViewName("actors.html");
-
-        return mv;
+        return "Update.html";
     }
 
 

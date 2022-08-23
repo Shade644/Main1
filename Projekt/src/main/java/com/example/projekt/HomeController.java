@@ -43,18 +43,13 @@ ActorsRepo actorsrepo;
     }
 
     @RequestMapping("/delete")
-    public ModelAndView delete(@RequestParam("tytul") String tytul){
+    public String delete(@RequestParam("tytul") String tytul){
     repo.deleteBytytul(tytul);
-
-        ModelAndView mv =new ModelAndView("Film");
-        mv.addObject("test",repo.findAll());
-        mv.setViewName("glowna.html");
-
-        return mv;
+        return "Update.html";
     }
 
     @RequestMapping("/update")
-    public ModelAndView update(Film film){
+    public String update(Film film){
     Film updateFilm = repo.findById(film.getId());
         updateFilm.setTytul(film.getTytul());
     updateFilm.setKategoria(film.getKategoria());
@@ -63,11 +58,7 @@ ActorsRepo actorsrepo;
     repo.save(updateFilm);
 
 
-        ModelAndView mv =new ModelAndView("Film");
-        mv.addObject("test",repo.findAll());
-        mv.setViewName("glowna.html");
-
-        return mv;
+        return "update.html";
     }
 
 }
