@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reżyserowie</title>
+    <style>
+        table, th, td, thead,tbody {
+        border: 1px solid;
+    }
+    </style>
+</head>
+<body>
+<H1>Strona z Reżyserami</H1>
+<table>
+    <thead>
+    <tr>
+        <th>Imie</th>
+        <th>Nazwisko</th>
+        <th>Data urodzenia</th>
+        <th>Tytuł filmu</th>
+    </tr>
+    </thead>
+<tbody>
+<tr th:each="Director: ${test3}">
+    <td th:text="${Director.imie_dir}" />
+    <td th:text="${Director.nazwisko_dir}" />
+    <td  th:text="${Director.data_urodzia_dir}" />
+    <td  th:text="${Director.tytul}" />
+
+</tr>
+</tbody>
+</table><br>
+<a href="/">Powrót na strone główną</a><br>
+</body>
+</html>

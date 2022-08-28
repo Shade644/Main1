@@ -23,16 +23,7 @@ ActorsRepo actorsrepo;
         return mv;
     }
 
-    @RequestMapping("/Stronaa")
-    public ModelAndView Strona(){
-        ModelAndView mv =new ModelAndView("Actors");
 
-        mv.addObject("test2",actorsrepo.findAll());
-        mv.setViewName("DodanoAct.html");
-
-        return mv;
-
-    }
     @RequestMapping("/saveActor")
     public ModelAndView saveData(Actors actors){
         actorsrepo.save(actors);

@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <title>Strona Administratora</title>
     <style>
+    *{
+    padding:0;
+    }
         table, th, td, thead,tbody {
             border: 1px solid;
         }
         a {
         font-size:20px;
+        }
+        p{
+        margin:0;
         }
     </style>
 </head>
@@ -18,11 +24,11 @@
 <h2>Dodawanie danych do bazy</h2>
 <form action="/saveData" method="post">
     <p>Tytuł</p>
-    <input type="text" name="tytul"><br>
+    <input type="text" name="tytul">
     <p>Kategoria</p>
-    <input type="text" name="kategoria" ><br>
+    <input type="text" name="kategoria">
     <p>Ocena</p>
-    <input type="number" min="1" max="10" step="1" name="ocena"><br>
+    <input type="number" min="1" max="10" step="1" name="ocena">
     <p>Data premiery</p>
     <input type="date" name="data" /><br>
     <input type="submit" value="zapisz">
@@ -81,6 +87,19 @@
     <input type="text" name="kraj_pochodzenia"><br>
     <p>Data urodzenia</p>
     <input type="date" name="data_urodzenia"><br>
+    <input type="submit" value="zapisz">
+    <br>
+</form>
+<h2>Dodaj Reżysera</h2>
+<form action="/saveRez" method="post">
+    <p>Imie</p>
+    <input type="text" name="imie_dir"><br>
+    <p>Nazwisko</p>
+    <input type="text" name="nazwisko_dir" ><br>
+    <p>Data urodzenia</p>
+    <input type="date" name="data_urodzia_dir"><br>
+    <p>Tytuł Filmu</p>
+    <input type="text" name="tytul"><br>
     <input type="submit" value="zapisz">
     <br>
 </form>
