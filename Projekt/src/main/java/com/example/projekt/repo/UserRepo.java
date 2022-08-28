@@ -1,6 +1,6 @@
-package com.example.projekt;
+package com.example.projekt.repo;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.projekt.model.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

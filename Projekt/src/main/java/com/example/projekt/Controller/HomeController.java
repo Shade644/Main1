@@ -1,5 +1,8 @@
-package com.example.projekt;
+package com.example.projekt.Controller;
 
+import com.example.projekt.repo.ActorsRepo;
+import com.example.projekt.model.Film;
+import com.example.projekt.repo.FilmRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
