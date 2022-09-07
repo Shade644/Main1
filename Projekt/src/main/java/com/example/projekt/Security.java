@@ -29,12 +29,10 @@ public class Security extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests().antMatchers("/").permitAll()
                 .antMatchers("/Strona").hasRole("admin")
-                .antMatchers("/Strona2").hasRole("admin")
                 .and()
                 .authorizeRequests().antMatchers("/console/**").permitAll()
                 .and().formLogin()
                 .and().logout().permitAll();
-
         http.csrf().disable();
         http.headers().frameOptions().disable();
     }

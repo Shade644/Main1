@@ -5,19 +5,22 @@ import com.example.projekt.repo.ActorsRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+
 @Controller
 public class ActorsController {
-@Autowired
-ActorsRepo actorsrepo;
-    @GetMapping("/actors")
-    public ModelAndView showActor(){
-        ModelAndView mv =new ModelAndView("Actors");
+    @Autowired
+    ActorsRepo actorsrepo;
 
-        mv.addObject("test2",actorsrepo.findAll());
+    @GetMapping("/actors")
+    public ModelAndView showActor() {
+        ModelAndView mv = new ModelAndView("Actors");
+
+        mv.addObject("test2", actorsrepo.findAll());
         mv.setViewName("actors.html");
 
         return mv;
@@ -25,22 +28,21 @@ ActorsRepo actorsrepo;
 
 
     @RequestMapping("/saveActor")
-    public ModelAndView saveData(Actors actors){
+    public ModelAndView saveData(Actors actors) {
         actorsrepo.save(actors);
 
-        ModelAndView mv =new ModelAndView("Actors");
+        ModelAndView mv = new ModelAndView("Actors");
 
-        mv.addObject("test2",actorsrepo.findAll());
+        mv.addObject("test2", actorsrepo.findAll());
         mv.setViewName("actors.html");
 
         return mv;
     }
 
     @RequestMapping("/deleteActor")
-    public String delete(@RequestParam("imie") String imie){
+    public String delete(@RequestParam("imie") String imie) {
         actorsrepo.deleteByimie(imie);
-        return "Update.html";
+        return "DodanoAct.html";
     }
-
-
 }
+

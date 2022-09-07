@@ -26,4 +26,5 @@ public class Actors {
     private Date Data_urodzenia;
 
 
+
 }

@@ -61,7 +61,7 @@ ActorsRepo actorsrepo;
     repo.save(updateFilm);
 
 
-        return "update.html";
+        return "DodanoAct.html";
     }
 
 }
