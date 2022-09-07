@@ -19,7 +19,6 @@ public class ActorsController {
     @GetMapping("/actors")
     public ModelAndView showActor() {
         ModelAndView mv = new ModelAndView("Actors");
-
         mv.addObject("test2", actorsrepo.findAll());
         mv.setViewName("actors.html");
 

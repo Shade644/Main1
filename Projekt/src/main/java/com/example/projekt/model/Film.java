@@ -20,7 +20,7 @@ public class Film {
     private int id;
     private String tytul;
     private int ocena;
-    private  String Kategoria;
+    private String Kategoria;
     private Date data;
 
 }
