@@ -1,5 +1,4 @@
-# Programowanie-aplikacji-back-endowych
-Prosta aplikacja z katalogiem filmów,aktorów,reżyserów.Pozwala na dodawanie,usówanie,aktualizowanie pozycji.
+Prosta aplikacja z katalogiem filmów,aktorów,reżyserów.Pozwala na dodawanie,usuwanie,aktualizowanie pozycji.
 
 Uruchomienie (CMD lub Terminal)
 1.cd .\Programowanie-aplikacji-back-endowych\Projekt\target
